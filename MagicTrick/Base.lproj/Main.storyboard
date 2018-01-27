@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="MagicTrick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1oD-d5-efY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WtP-I8-bZ9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="bLy-6c-QpY">
+                                <rect key="frame" x="30" y="587" width="315" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N34-Au-2aB">
+                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.8671339897260274" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Magic">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.87039811643835618" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="magicButtonTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="C0g-x4-OPm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLw-j4-9KP">
+                                        <rect key="frame" x="164.5" y="0.0" width="150.5" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.8671339897260274" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Throw Ball">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.87039811643835618" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="throwBallTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="zlc-mx-Z4y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3ge-Is-GHy"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFg-Bb-ZPL">
+                                <rect key="frame" x="20" y="40" width="335" height="20.5"/>
+                                <color key="backgroundColor" white="1" alpha="0.67299871575342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="0.67299871575342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sFg-Bb-ZPL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1oD-d5-efY" secondAttribute="top" constant="40" id="B4I-7f-rrw"/>
+                            <constraint firstAttribute="bottom" secondItem="WtP-I8-bZ9" secondAttribute="bottom" id="GKx-xb-ULL"/>
+                            <constraint firstItem="sFg-Bb-ZPL" firstAttribute="top" secondItem="U9r-it-ncG" secondAttribute="top" priority="750" constant="20" id="Lmt-vS-1Sx"/>
+                            <constraint firstItem="WtP-I8-bZ9" firstAttribute="top" secondItem="1oD-d5-efY" secondAttribute="top" id="PVW-XD-vzK"/>
+                            <constraint firstItem="sFg-Bb-ZPL" firstAttribute="leading" secondItem="U9r-it-ncG" secondAttribute="leading" constant="20" id="Swk-2T-myg"/>
+                            <constraint firstItem="WtP-I8-bZ9" firstAttribute="leading" secondItem="1oD-d5-efY" secondAttribute="leading" id="i8M-JL-n5L"/>
+                            <constraint firstItem="bLy-6c-QpY" firstAttribute="leading" secondItem="U9r-it-ncG" secondAttribute="leading" constant="30" id="p0n-0N-oW0"/>
+                            <constraint firstItem="U9r-it-ncG" firstAttribute="trailing" secondItem="bLy-6c-QpY" secondAttribute="trailing" constant="30" id="uqU-wo-FO1"/>
+                            <constraint firstItem="U9r-it-ncG" firstAttribute="trailing" secondItem="sFg-Bb-ZPL" secondAttribute="trailing" constant="20" id="xu9-5F-gb6"/>
+                            <constraint firstAttribute="trailing" secondItem="WtP-I8-bZ9" secondAttribute="trailing" id="yDC-sa-3i9"/>
+                            <constraint firstItem="U9r-it-ncG" firstAttribute="bottom" secondItem="bLy-6c-QpY" secondAttribute="bottom" constant="40" id="zmm-go-GY8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U9r-it-ncG"/>
+                    </view>
+                    <connections>
+                        <outlet property="note" destination="sFg-Bb-ZPL" id="9EG-fS-Ty2"/>
+                        <outlet property="sceneView" destination="WtP-I8-bZ9" id="ZN3-fv-Eh5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
