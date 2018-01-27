@@ -27,3 +27,9 @@ This project was made with:
 ### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/pateljay43/MagicTrick/blob/master/LICENSE.md) file for details.
+
+### References
+
+- Apple's documentation for [ARKit](https://developer.apple.com/documentation/arkit) library
+- Slack members
+- Stackoverflow
