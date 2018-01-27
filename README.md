@@ -9,7 +9,7 @@ This project was made with:
 
 ### Requirements
 
-- iOS device with a processor of series A9 or newer (iPhone 6s or newer)
+- iOS device with a processor of series A9 or newer (iPhone 6s, iPad 9.7 2017 or newer)
 
 ### How to use
 
