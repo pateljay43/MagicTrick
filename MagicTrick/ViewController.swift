@@ -193,6 +193,12 @@ extension ViewController: ARSKViewDelegate {
             omniLight?.temperature = lightEstimate.ambientColorTemperature
         }
     }
+    
+    func hideNoteLabel(_ hide: Bool) {
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.note.isHidden = hide
+        }
+    }
 }
 
 // MARK: -
@@ -203,9 +209,7 @@ extension ViewController {
         // make sure we have a hat before throwing the ball
         guard isHatPlaced else { return }
         
-        UIView.animate(withDuration: 0.5) { [weak self] in
-            self?.note.isHidden = true
-        }
+        hideNoteLabel(true)
         
         // Instantiate a ball, put it in front of camera and throw it forward
         if let ballNode = ballNode?.clone(), let camera = sceneView.session.currentFrame?.camera {
@@ -226,8 +230,6 @@ extension ViewController {
         // Toggle balls' hidden property if they are inside 'node'
         balls.filter({ $0.isInside(node: node) }).forEach({ $0.isHidden = !$0.isHidden })
         
-        UIView.animate(withDuration: 0.5) { [weak self] in
-            self?.note.isHidden = false
-        }
+        hideNoteLabel(false)
     }
 }
