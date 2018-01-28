@@ -223,8 +223,8 @@ extension ViewController {
     }
     
     func removeBallsInside(node: SCNNode) {
-        // hide balls which are inside 'node'
-        balls.forEach { $0.isHidden = $0.isInside(node: node) }
+        // Toggle balls' hidden property if they are inside 'node'
+        balls.filter({ $0.isInside(node: node) }).forEach({ $0.isHidden = !$0.isHidden })
         
         UIView.animate(withDuration: 0.5) { [weak self] in
             self?.note.isHidden = false
